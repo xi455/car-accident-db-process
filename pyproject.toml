@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "lost-and-found-db-process"
+version = "0.1.0"
+description = ""
+authors = ["jasonxie <jasonxie@ntub.edu.tw>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sqlalchemy = "^2.0.21"
+pyodbc = "^5.0.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+isort = "^5.12.0"
+ipython = "^8.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+extend-exclude = '''
+/(
+  | migrations
+)/
+'''
